@@ -1,0 +1,1 @@
+/* Stenen die op de tafel liggen */

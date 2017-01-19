@@ -1,0 +1,1 @@
+/* Stenen die de speler op de plank heeft liggen */

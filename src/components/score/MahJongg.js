@@ -1,0 +1,1 @@
+/* Extra punten en verdubbelaars wanneer Mah Jongg */
