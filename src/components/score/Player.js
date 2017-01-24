@@ -4,7 +4,7 @@ import React, { PropTypes } from 'react';
 const Player = props => {
   return (
     <div className="player">
-      <h1>Player 1</h1>
+      <h2>Player 1</h2>
     </div>
   )
 }

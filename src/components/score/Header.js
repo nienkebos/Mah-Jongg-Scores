@@ -7,8 +7,8 @@ import Wind from './Wind'
 const Header = props => {
   return (
     <div className="header">
+      <h1>MahJongg Score</h1>
       <Player />
-      <h1>Scores</h1>
       <Wind />
     </div>
   )

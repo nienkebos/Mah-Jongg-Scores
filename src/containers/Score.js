@@ -14,14 +14,14 @@ class Score extends Component {
   render() {
     return (
       <div className="score">
-        <h1>MahJongg Score</h1>
-      <Header />
-      <Exposed />
-      <Concealed />
-      <Images />
-      <MahJongg />
-      <TotalScore />
-
+        <Header />
+        <div className="container">
+          <Exposed />
+          <Concealed />
+          <Images />
+          <MahJongg />
+        </div>
+        <TotalScore />
       </div>
     );
   }
