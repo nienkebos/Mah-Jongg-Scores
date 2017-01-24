@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import "./style/score.scss";
 import Score from './containers/Score'
 
 class App extends React.Component {
@@ -11,4 +12,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default App
