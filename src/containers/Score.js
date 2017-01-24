@@ -3,9 +3,7 @@ plank/tafel heeft liggen, welke plaatjes hij heeft gepakt, en vinkt aan welke
 verdubbelaars van toepassing zijn */
 import React, { Component, PropTypes } from 'react'
 import Header from '../components/score/Header'
-import Exposed from '../components/score/Exposed'
-import Concealed from '../components/score/Concealed'
-import Images from '../components/score/Images'
+import Input from '../components/score/Input'
 import MahJongg from '../components/score/MahJongg'
 import TotalScore from '../components/score/TotalScore'
 
@@ -16,9 +14,7 @@ class Score extends Component {
       <div className="score">
         <Header />
         <div className="container">
-          <Exposed />
-          <Concealed />
-          <Images />
+          <Input />
           <MahJongg />
         </div>
         <TotalScore />
