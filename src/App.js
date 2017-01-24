@@ -1,13 +1,15 @@
 import React from 'react';
 import "./style/score.scss";
+import Score from './containers/Score'
 
 class App extends React.Component {
   render() {
     return (
-      <h1>Nienke is de slimste mens!</h1>
+      <div>
+        <Score />
+      </div>
     )
   }
 }
 
-export default App;
-
+export default App
