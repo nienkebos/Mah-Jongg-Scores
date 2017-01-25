@@ -2,7 +2,11 @@
 plank/tafel heeft liggen, welke plaatjes hij heeft gepakt, en vinkt aan welke
 verdubbelaars van toepassing zijn */
 import React, { Component, PropTypes } from 'react'
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import * as ScoreActionCreators from '../actions/score';
+
+
 
 import Header from '../components/score/Header'
 import Input from '../components/score/Input'
@@ -16,24 +20,32 @@ class Score extends Component {
   // };
 
   render() {
-    const {scores} = this.props;
+    const { dispatch, score } = this.props
+    const addScore = bindActionCreators(ScoreActionCreators.addScore, dispatch);
 
     return (
       <div className="score">
         <Header />
         <div className="container">
-          <Input scores={scores}/>
+          <Input
+            score={score}
+            addScore={addScore}
+          />
           <MahJongg />
         </div>
-        <TotalScore />
+        <TotalScore
+          score={score}
+        />
       </div>
-    );
+    )
   }
 
 }
 
 const mapStateToProps = state => (
-  {scores: state.scores}
+  {
+    score: state.score
+  }
 );
 
-export default connect(mapStateToProps)(Score);
+export default connect(mapStateToProps)(Score)
