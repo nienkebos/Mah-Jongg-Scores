@@ -3,26 +3,26 @@ import React, { PropTypes } from 'react';
 
 const Input = props => {
   return (
-    <form>
+    <form className="score-inputs">
 
       <div className="concealed">
         <label>
           Fill in your concealed tiles
-          <input type="text" name="concealed"/>
+          <input type="text" name="concealed" value={props.scores.concealed}/>
         </label>
       </div>
 
       <div className="exposed">
         <label>
           Fill in your exposed tiles
-          <input type="text" name="exposed"/>
+          <input type="text" name="exposed" value={props.scores.exposed}/>
         </label>
       </div>
 
       <div className="images">
         <label>
           Fill in Season or Flower tiles
-          <input type="text" name="images"/>
+          <input type="text" name="images" value={props.scores.images}/>
         </label>
       </div>
 

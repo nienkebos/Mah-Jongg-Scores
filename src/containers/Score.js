@@ -2,6 +2,8 @@
 plank/tafel heeft liggen, welke plaatjes hij heeft gepakt, en vinkt aan welke
 verdubbelaars van toepassing zijn */
 import React, { Component, PropTypes } from 'react'
+import { connect } from 'react-redux';
+
 import Header from '../components/score/Header'
 import Input from '../components/score/Input'
 import MahJongg from '../components/score/MahJongg'
@@ -9,12 +11,18 @@ import TotalScore from '../components/score/TotalScore'
 
 class Score extends Component {
 
+  // static propTypes = {
+  //   scores: PropTypes.object.isRequired,
+  // };
+
   render() {
+    const {scores} = this.props;
+
     return (
       <div className="score">
         <Header />
         <div className="container">
-          <Input />
+          <Input scores={scores}/>
           <MahJongg />
         </div>
         <TotalScore />
@@ -23,4 +31,9 @@ class Score extends Component {
   }
 
 }
-export default Score;
+
+const mapStateToProps = state => (
+  {scores: state.scores}
+);
+
+export default connect(mapStateToProps)(Score);
