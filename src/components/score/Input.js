@@ -3,16 +3,34 @@ import React, { PropTypes } from 'react';
 
 const Input = props => {
   return (
-    <div className="concealed">
-      <h1>Fill in your concealed tiles</h1>
-    </div>
-    <div className="exposed">
-      <h1>Fill in your exposed tiles</h1>
-    </div>
-    <div className="images">
-      <h1>Fill in Season or Flower tiles</h1>
-    </div>
+    <form>
+
+      <div className="concealed">
+        <label>
+          Fill in your concealed tiles
+          <input type="text" name="concealed"/>
+        </label>
+      </div>
+
+      <div className="exposed">
+        <label>
+          Fill in your exposed tiles
+          <input type="text" name="exposed"/>
+        </label>
+      </div>
+
+      <div className="images">
+        <label>
+          Fill in Season or Flower tiles
+          <input type="text" name="images"/>
+        </label>
+      </div>
+
+      <input type="submit" value="Submit"/>
+
+
+    </form>
   )
 }
 
-export default Images;
+export default Input;
