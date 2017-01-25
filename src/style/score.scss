@@ -1,1 +1,57 @@
+@import '_variables';
+@import '_buttons';
 @import '_reset';
+@import '_text-styling';
+
+.score {
+  width:400px;
+  max-width:90%;
+  margin:50px auto;
+  border:1px solid $border-color;
+
+
+  .header {
+    background:$light-grey;
+    margin-bottom:$margin;
+    padding:$padding;
+    height:100px;
+
+
+    .player {
+      float:left;
+      border-bottom:1px solid #333;
+      padding-bottom:5px;
+    }
+
+    .wind {
+      float:right;
+      padding-bottom:5px;
+      border-bottom:1px solid #333;
+    }
+  }
+
+  .container {
+    padding: $padding;
+
+    input {
+      width:100%;
+      padding: 0 10px;
+      height:35px;
+      border:1px solid $border-color;
+      margin-top:5px;
+      margin-bottom:10px;
+    }
+  }
+
+
+  .totalscore {
+    margin-top:$margin;
+    background: $light-grey;
+    height:50px;
+    padding: $padding;
+
+    button {
+      float:right;
+    }
+  }
+}
