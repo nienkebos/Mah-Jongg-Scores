@@ -5,7 +5,7 @@ import React, { PropTypes } from 'react';
 const Wind = props => {
   return (
     <div className="wind">
-      <h1>Eastern wind</h1>
+      <span>Eastern wind</span>
     </div>
   )
 }

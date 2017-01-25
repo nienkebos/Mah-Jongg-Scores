@@ -1,0 +1,16 @@
+* {
+  font-family: 'Raleway', sans-serif !important;
+  font-size: $text-size;
+}
+
+h1 {
+  font-size:24px;
+  font-weight:bold;
+  margin-bottom: $margin;
+  color:$main-color;
+}
+
+h3 {
+  font-size:$text-size;
+  font-weight:bold;
+}

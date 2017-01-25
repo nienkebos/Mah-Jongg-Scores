@@ -12,12 +12,12 @@ class Score extends Component {
   render() {
     return (
       <div className="score">
-        <h1>MahJongg Score</h1>
-      <Header />
-      <Input />
-      <MahJongg />
-      <TotalScore />
-
+        <Header />
+        <div className="container">
+          <Input />
+          <MahJongg />
+        </div>
+        <TotalScore />
       </div>
     );
   }
