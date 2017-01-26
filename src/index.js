@@ -9,7 +9,10 @@ import App from './App'
 // const reducer = combineReducers(reducers)
 
 // Note: passing enhancer as the last argument requires redux@>=3.1.0
-const store = createStore(ScoreReducer)
+const store = createStore(
+  ScoreReducer,
+  window.devToolsExtension && window.devToolsExtension()
+)
 
 console.log(store.getState());
 
