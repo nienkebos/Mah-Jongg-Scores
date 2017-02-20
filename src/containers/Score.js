@@ -22,6 +22,8 @@ class Score extends Component {
   render() {
     const { dispatch, score } = this.props
     const addScore = bindActionCreators(ScoreActionCreators.addScore, dispatch);
+    const addMahJongg = bindActionCreators(ScoreActionCreators.addMahJongg, dispatch);
+
 
     return (
       <div className="score">
@@ -31,7 +33,9 @@ class Score extends Component {
             score={score}
             addScore={addScore}
           />
-          <MahJongg />
+          <MahJongg
+            addMahJongg={addMahJongg}
+          />
         </div>
         <TotalScore
           score={score}

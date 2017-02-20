@@ -55,9 +55,9 @@ class Input extends Component {
 
 Input.propTypes = {
   addScore: PropTypes.func.isRequired,
-  concealed: PropTypes.number.isRequired,
-  exposed: PropTypes.number.isRequired,
-  images: PropTypes.number.isRequired
+  // concealed: PropTypes.number.isRequired,
+  // exposed: PropTypes.number.isRequired,
+  // images: PropTypes.number.isRequired
 }
 
 export default Input;
