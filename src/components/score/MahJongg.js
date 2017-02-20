@@ -3,9 +3,18 @@ import React, { PropTypes } from 'react';
 
 const MahJongg = props => {
   return (
-    <div className="mahjongg">
-      <h1>Where you the one with Mah Jongg?</h1>
-    </div>
+    <form className="mahjongg">
+      <label>Mah Jongg: <input type="checkbox"/></label>
+      <label>
+        Winnende steen: 
+        <select>
+          <option>door kong-roof </option>
+          <option>van de muur </option>
+          <option>van dode muur </option>
+          <option>laatste van levende muur </option>
+        </select>
+      </label>
+    </form>
   )
 }
 
