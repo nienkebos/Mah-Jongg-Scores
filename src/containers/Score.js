@@ -20,8 +20,10 @@ class Score extends Component {
   // };
 
   render() {
-    const { dispatch, score } = this.props
+    const { dispatch, score, mahJongg, lastStone } = this.props
     const addScore = bindActionCreators(ScoreActionCreators.addScore, dispatch);
+    const addMahJongg = bindActionCreators(ScoreActionCreators.addMahJongg, dispatch);
+
 
     return (
       <div className="score">
@@ -31,10 +33,16 @@ class Score extends Component {
             score={score}
             addScore={addScore}
           />
-          <MahJongg />
+          <MahJongg
+            addMahJongg={addMahJongg}
+            mahJongg={mahJongg}
+            lastStone={lastStone}
+          />
         </div>
         <TotalScore
           score={score}
+          mahJongg={mahJongg}
+          lastStone={lastStone}
         />
       </div>
     )
@@ -44,7 +52,9 @@ class Score extends Component {
 
 const mapStateToProps = state => (
   {
-    score: state.score
+    score: state.score,
+    mahJongg: state.mahJongg,
+    lastStone: state.lastStone
   }
 );
 

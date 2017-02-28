@@ -6,3 +6,11 @@ export const addScore = (score) => {
     score
   }
 }
+
+export const addMahJongg = (mahJongg, lastStone) => {
+  return {
+    type: ScoreActionTypes.ADD_MAHJONGG,
+    mahJongg,
+    lastStone
+  }
+}

@@ -3,9 +3,9 @@ import React, { Component, PropTypes } from 'react'
 
 class Input extends Component {
   state = {
-    concealed: 10,
-    exposed: 12,
-    images: 14
+    concealed: '',
+    exposed: '',
+    images: ''
   };
 
   changeState = (e) => {
@@ -54,7 +54,10 @@ class Input extends Component {
 }
 
 Input.propTypes = {
-  addScore: PropTypes.func.isRequired
+  addScore: PropTypes.func.isRequired,
+  // concealed: PropTypes.number.isRequired,
+  // exposed: PropTypes.number.isRequired,
+  // images: PropTypes.number.isRequired
 }
 
 export default Input;
