@@ -2,12 +2,12 @@ import * as ScoreActionTypes from '../actiontypes/score'
 
 const initialState = {
   score: {
-    concealed: 5,
-    exposed: 5,
-    images: 5
+    concealed: 0,
+    exposed: 0,
+    images: 0
   },
   mahJongg: false,
-  lastStone: ''
+  lastStone: 0
 }
 
 
@@ -15,16 +15,18 @@ export default function Score(state=initialState, action){
 	switch(action.type) {
     case ScoreActionTypes.ADD_SCORE:
       return {
+        mahJongg: state.mahJongg,
+        lastStone: state.lastStone,
         score: action.score
       }
 
     case ScoreActionTypes.ADD_MAHJONGG:
     console.log('reducer',action);
       return {
+        score: state.score,
         mahJongg: action.mahJongg,
         lastStone: action.lastStone
       }
-
 
     default:
       return state;

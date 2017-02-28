@@ -4,14 +4,12 @@ import React, { Component, PropTypes } from 'react';
 class MahJongg extends Component {
   state = {
     mahJongg: false,
-    lastStone: ''
+    lastStone: 0
   };
 
   handleChange = (e) => {
     const field = e.target.name;
     const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
-
-    console.log('checkbox',e.target);
     this.setState({
       [field]: value
     });
@@ -21,6 +19,25 @@ class MahJongg extends Component {
     if (e) e.preventDefault();
     this.props.addMahJongg(this.state.mahJongg, this.state.lastStone);
   };
+
+  renderLastStone() {
+    if (this.state.mahJongg)
+    return (
+      <label>
+        Winnende steen:
+        <select
+          name="lastStone"
+          value={this.state.lastStone}
+          onChange={this.handleChange}>
+            <option value="0">van tafel </option>
+            <option value="10">door kong-roof </option>
+            <option value="2">van de muur </option>
+            <option value="10">van dode muur </option>
+            <option value="10">laatste van levende muur </option>
+        </select>
+      </label>
+    )
+  }
 
   render() {
     const { addMahJongg } = this.props;
@@ -36,19 +53,7 @@ class MahJongg extends Component {
             onChange={this.handleChange}
           />
         </label>
-        <label>
-          Winnende steen:
-          <select
-            name="lastStone"
-            value={this.state.lastStone}
-            onChange={this.handleChange}>
-              <option value="0">van tafel </option>
-              <option value="10">door kong-roof </option>
-              <option value="2">van de muur </option>
-              <option value="10">van dode muur </option>
-              <option value="10">laatste van levende muur </option>
-          </select>
-        </label>
+        {this.renderLastStone()}
         <input type="submit" value="Submit"/>
 
       </form>

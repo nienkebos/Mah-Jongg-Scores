@@ -2,8 +2,23 @@
 import React, { PropTypes } from 'react';
 
 const TotalScore = props => {
-  console.log(12,props);
-  const totalScore = parseInt(props.score.concealed) + parseInt(props.score.exposed) + parseInt(props.score.images);
+  let mahJonggScore = 0;
+
+  if(props.mahJongg) {
+    mahJonggScore = 20;
+  } else {
+    mahJonggScore = 0;
+  }
+
+  console.log(1,props);
+
+  const totalScore =
+    parseInt(props.score.concealed)
+    + parseInt(props.score.exposed)
+    + parseInt(props.score.images)
+    + mahJonggScore
+    + parseInt(props.lastStone);
+
   return (
     <div className="totalscore">
       <button>Calculate</button>
