@@ -21,22 +21,29 @@ class MahJongg extends Component {
   };
 
   renderLastStone() {
-    if (this.state.mahJongg)
-    return (
-      <label>
-        Winnende steen:
-        <select
-          name="lastStone"
-          value={this.state.lastStone}
-          onChange={this.handleChange}>
-            <option value="0">van tafel </option>
-            <option value="10">door kong-roof </option>
-            <option value="2">van de muur </option>
-            <option value="10">van dode muur </option>
-            <option value="10">laatste van levende muur </option>
-        </select>
-      </label>
-    )
+    if (this.state.mahJongg) {
+      return (
+        <label>
+          Winnende steen:
+          <select
+            name="lastStone"
+            value={this.state.lastStone}
+            onChange={this.handleChange}>
+              <option value="0">van tafel </option>
+              <option value="10">door kong-roof </option>
+              <option value="2">van de muur </option>
+              <option value="10">van dode muur </option>
+              <option value="10">laatste van levende muur </option>
+          </select>
+        </label>
+      )
+    } else {
+      this.setState(
+        {
+          lastStone: 0
+        }
+      )
+    }
   }
 
   render() {
@@ -54,7 +61,7 @@ class MahJongg extends Component {
           />
         </label>
         {this.renderLastStone()}
-        <input type="submit" value="Submit"/>
+        <input type="submit" value="Save"/>
 
       </form>
   )}

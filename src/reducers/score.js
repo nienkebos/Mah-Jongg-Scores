@@ -21,7 +21,6 @@ export default function Score(state=initialState, action){
       }
 
     case ScoreActionTypes.ADD_MAHJONGG:
-    console.log('reducer',action);
       return {
         score: state.score,
         mahJongg: action.mahJongg,
