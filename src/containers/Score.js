@@ -20,7 +20,7 @@ class Score extends Component {
   // };
 
   render() {
-    const { dispatch, score } = this.props
+    const { dispatch, score } = this.props;
     const addScore = bindActionCreators(ScoreActionCreators.addScore, dispatch);
 
     return (

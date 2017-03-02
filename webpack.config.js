@@ -18,10 +18,5 @@ module.exports = {
         test:/\.scss$/
       }
     ]
-  },
-  //plugins: [
-  //  new HtmlWebpackPlugin({
-  //    template: './index.html'
-  //  })
-  //]
+  }
 };
