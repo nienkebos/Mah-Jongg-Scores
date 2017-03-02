@@ -2,16 +2,14 @@ import * as ScoreActionTypes from '../actiontypes/score'
 
 const initialState = {
   score: {
-    concealed: '',
-    exposed: '',
-    images: ''
-  }
+    concealed: [],
+    exposed: [],
+    images: []
+  },
 }
 
 
-export default function Score(state=initialState, action){
-  console.log(action);
-
+export default function Score(state=initialState, action=null){
 	switch(action.type) {
     case ScoreActionTypes.ADD_SCORE:
       return {

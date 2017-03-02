@@ -2,6 +2,7 @@
 @import '_buttons';
 @import '_reset';
 @import '_text-styling';
+@import '_tiles';
 
 .score {
   width:400px;
@@ -34,13 +35,18 @@
     padding: $padding;
 
     input {
-      width:100%;
+      width:80%;
       padding: 0 10px;
       height:35px;
       border:1px solid $border-color;
       margin-top:5px;
       margin-bottom:10px;
     }
+
+    button {
+      width:20%;
+    }
+
   }
 
 

@@ -1,0 +1,79 @@
+.tile {
+  float:left;
+  width:50px;
+  margin-right:10px;
+  margin-bottom:10px;
+  position:relative;
+
+  .fa {
+    position:absolute;
+    right:0px;
+    top:0px;
+    display:none;
+    width:20px;
+    height:20px;
+    background:red;
+    color:white;
+    z-index:100;
+    font-size:16px;
+    text-align:center;
+    font-family: FontAwesome !important;
+    text-align:center;
+    line-height:20px;
+  }
+
+  img {
+    width:100%;
+  }
+
+  &:hover {
+    .fa {
+      display:block;
+    }
+  }
+}
+
+.tile-box {
+
+  .add-tile {
+    border:1px solid #ccc;
+    height:30px;
+    padding: 0 10px;
+    line-height: 30px;
+    margin-bottom:25px;
+    position:relative;
+
+    .add-button {
+      color: #ccc;
+      font-size: 18px;
+      float:right;
+      line-height: 30px;
+    }
+
+    .tiles-to-add {
+      position:absolute;
+      left:0;
+      top:28px;
+      border:1px solid #CCC;
+      background:white;
+      width:100%;
+      display:none;
+      padding-top:10px;
+      padding-left:10px;
+    }
+
+    &:hover {
+      .tiles-to-add {
+        display:block;
+      }
+    }
+  }
+
+
+  .score-list {
+    border:1px solid #ccc;
+    padding:10px;
+    min-height:75px;
+    margin-bottom:25px;
+  }
+}
